@@ -1,11 +1,18 @@
+// lang vars
+case process.env.NODE_ENV
+  when 'ru'
+    - var bottom_slog = 'Атмосфера <br> исключительного комфорта'
+  when 'eng'
+    - var bottom_slog = 'ATMOSPHERE OF<br> OUTSTANDING COMFORT'
+  when 'kz'
+    - var bottom_slog = 'ЕРЕКШЕ ЖАЙЛЫ ОРТА'
+
 section#main
   a(name="top")
   picture
-    source(srcset="images/main_bg.jpg" media="(min-width: 1560px)")
-    source(srcset="images/main_bg_desktop.jpg" media="(min-width: 1170px)")
+    source(srcset="images/main_bg.jpg" media="(min-width: 1170px)")
     source(srcset="images/main_bg_tablet.jpg" media="(min-width: 970px)")
     source(srcset="images/main_bg_tabletvert.jpg" media="(min-width: 750px)")
     source(srcset="images/main_bg_mobile.jpg" media="(min-width: 1px)")
     img(srcset="images/main_bg.jpg")
-  .container
-    img(src="images/scroll.png").bottom_link
+  h2.bottom_link !{bottom_slog}

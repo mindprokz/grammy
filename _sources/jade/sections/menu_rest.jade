@@ -1,35 +1,62 @@
+// lang vars
+case process.env.NODE_ENV
+  when 'ru'
+    - var header = 'Меню'
+    - var one = 'Греческий салат'
+    - var two = 'Дорадо'
+    - var three = 'Каре ягненка с овощами'
+    - var four = 'Песочная корзина с джемом'
+    - var five = 'Салат с языком'
+    - var six = 'Стейк Ангус'
+    - var seven = 'Филе утки с фруктовым фламбе'
+    - var eight = 'Шоколадный кекс Lava Vulcanica'
+  when 'eng'
+    - var header = 'Menu'
+    - var one = 'Greek salad'
+    - var two = 'Grilled dorado'
+    - var three = 'Lamb rack with vegetables'
+    - var four = 'Short pastry basket with jam and cream'
+    - var five = 'Salad with tongue'
+    - var six = 'Angus steak'
+    - var seven = 'Duck fillet with fruit flambe'
+    - var eight = 'Chocolate cake LavaVulcanica'
+  when 'kz'
+    - var header = 'Мәзірі'
+    - var one = 'Грек салаты'
+    - var two = 'Дорадо'
+    - var three = 'Көкөніс қосылған қозы етінен каре'
+    - var four = 'Джем мен кілегей қосылған үгілмелі пісірме '
+    - var five = 'Тіл қосылған салат'
+    - var six = 'Salad with tongue'
+    - var seven = 'Жеміс-жидек фламбесімен үйрек еті'
+    - var eight = 'Lava Vulcanica шоколадты кексі'
+
 section#menu_rest
   a(name="menu")
   .container
-    h2 Меню
+    h2 #{header}
     .sl_menu
       .slide
         img(src="images/dishes/1.jpg")
-        h3 Бифу рамен
+        h3 #{one}
       .slide
         img(src="images/dishes/2.jpg")
-        h3 Гютан ясай нимоно
+        h3 #{two}
       .slide
         img(src="images/dishes/3.jpg")
-        h3 Данки
+        h3 #{three}
       .slide
         img(src="images/dishes/4.jpg")
-        h3 Канадиан маки
+        h3 #{four}
       .slide
         img(src="images/dishes/5.jpg")
-        h3 Кохицуджи но гриль
+        h3 #{five}
       .slide
         img(src="images/dishes/6.jpg")
-        h3 Сифудо мисо сиру
+        h3 #{six}
       .slide
         img(src="images/dishes/7.jpg")
-        h3 Сяке терияки
+        h3 #{seven}
       .slide
         img(src="images/dishes/8.jpg")
-        h3 Сяке хато рору
-      .slide
-        img(src="images/dishes/9.jpg")
-        h3 Туна сашими сарада
-      .slide
-        img(src="images/dishes/10.jpg")
-        h3 Фудзи
+        h3 #{eight}

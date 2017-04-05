@@ -1,7 +1,32 @@
+// lang vars
+case process.env.NODE_ENV
+  when 'ru'
+    - var header = 'О ресторане'
+    - var text = 'Караоке-ресторан «Grammy» — это яркие вечеринки в теплой дружеской атмосфере для самой взыскательной публики.'
+    - var text_2 = 'Для особенных случаев'
+    - var text_3 = '6 роскошных VIP-комнат'
+    - var text_4 = 'вместимостью  от 6 до 25 человек'
+    - var button = 'Посмотреть видео'
+  when 'eng'
+    - var header = 'About'
+    - var text = 'Караоке-ресторан «Grammy» — это яркие вечеринки в теплой дружеской атмосфере для самой взыскательной публики.'
+    - var text_2 = 'For special cases'
+    - var text_3 = '6 luxurious VIP-rooms'
+    - var text_4 = 'for 6 to 25 people'
+    - var button = 'Video'
+  when 'kz'
+    - var header = 'Мейрамхана туралы'
+    - var text = 'Караоке-ресторан «Grammy» — это яркие вечеринки в теплой дружеской атмосфере для самой взыскательной публики.'
+    - var text_2 = 'Айтулы оқиғаларды атап өтуге'
+    - var text_3 = 'арналған 6 vip-бөлме'
+    - var text_4 = 'сыйымдылығы 6-дан 25 адамға дейін'
+    - var button = 'Бейне қарау'
+
 section#about
   a(name="about")
   .container
-    img(src="images/log.png").shape
-    h3 О ресторане
-    p Изысканность и гармоничная утонченность – слова, как нельзя лучше подходящие для описания ресторана «Kiku Matsuri». Современный дизайн и сдержанный японский минимализм создают уникальность интерьера.
-    a(href="https://www.youtube.com/embed/woVUvj8WeLA?autoplay=1" class="fancybox fancybox.iframe").video_link Посмотреть видео
+    p #{text}
+    h3 #{text_2}
+    h2 #{text_3}
+    h3 #{text_4}
+    a(href="https://www.youtube.com/embed/Q4QOcur6T6E?autoplay=1" class="fancybox fancybox.iframe").video_link #{button}
